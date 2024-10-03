@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<div class="row justify-content-center w-full">
+        <div class="card mb-0">
+            <div class="card-body">
+                <div class="container content-center">
+
+                    <a class="text-nowrap logo-img text-center d-block py-3 w-100">
+                        <img src="{% static 'images/logos/favicon.png' %}" width="130" alt="">
+                    </a>
+
+                    <!-- Tagline -->
+                    <h5 class="text-center">Local Goverment Unit of Naval</h5>
+                    <h6 class="text-center">Naval, Biliran</h6>
+
+                    <!-- Form (Username, Password, Login) -->
+                    <form action="" method="POST">
+                    
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                aria-describedby="emailHelp" required>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                required>
+                        </div>
+
+                        <!-- Remeber this Device -->
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="form-check">
+                                <input class="form-check-input primary" type="checkbox" value=""
+                                    id="flexCheckChecked">
+                                <label class="form-check-label text-dark" for="flexCheckChecked">
+                                    Remeber this Device
+                                </label>
+                            </div>
+
+                            <!-- Forgot Password ? -->
+                            <style>
+                                .no-underline {
+                                    text-decoration: none;
+                                    /* Removes the underline */
+                                    color: inherit;
+                                    /* Keeps the link color consistent with the surrounding text */
+                                }
+
+                                .no-underline:hover {
+                                    text-decoration: underline;
+                                    /* Optional: Add underline on hover for better user experience */
+                                }
+                            </style>
+                            <a class="text-primary fw-bold no-underline"
+                                href="reset-password.php">Forgot
+                                Password?</a>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4 gap-2">
+                            <!-- Back Button -->
+                            <button type="button" onclick="history.back()"
+                                class="btn btn-primary w-50 rounded-2">Back</button>
+
+                            <!-- Login Button -->
+                            <button type="submit" class="btn btn-primary w-50 rounded-2">Login</button>
+                        </div>
+
+                    </form>
+                    <br>
+                    <p class="text-center">Streamlining Real Property Management for Seamless Tax
+                        Solutions.</p>
+                </div>
+            </div>
+        </div>
+</div>
+     
+{% endblock %}
